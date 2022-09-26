@@ -18,3 +18,14 @@ type Brand{
     country: String!
     cars: [Car]
 }
+
+type Mutation{
+    addCar(carInput: CarInput): Car
+}
+
+input CarInput{
+    title: String!
+    price: Int!
+    age: Int!
+    brandId: ID!
+}

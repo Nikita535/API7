@@ -20,6 +20,13 @@ public class Car {
     @ManyToOne(fetch = FetchType.EAGER)
     private Brand brand;
 
+    public Car(String title, int price, int age, Brand brand) {
+        this.title = title;
+        this.price = price;
+        this.age = age;
+        this.brand = brand;
+    }
+
     public Long getId() {
         return id;
     }
