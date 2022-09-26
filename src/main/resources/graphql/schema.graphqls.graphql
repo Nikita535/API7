@@ -1,0 +1,20 @@
+
+type Query{
+    cars:[Car]
+    findCarByBrand(brandName: String): [Car]
+}
+
+type Car{
+    id: ID!
+    title: String!
+    price: Int!
+    age: Int!
+    brand: Brand!
+}
+
+type Brand{
+    id: ID!
+    brandName: String!
+    country: String!
+    cars: [Car]
+}
